@@ -28,7 +28,7 @@ Array.prototype.myFilter = function (cb) {
 };
 
 const newArr2 = arr.myFilter((num, i, arr) => {
-  return num * i;
+  return num > i;
 });
 
 console.log(newArr2);
@@ -43,7 +43,7 @@ Array.prototype.myReduce = function (cb, initial) {
   return accumulator;
 };
 
-const newArr3 = arr.myReduce((num, i, arr) => {
+const newArr3 = arr.myReduce((acc, num, i, arr) => {
   return num * i;
 });
 
@@ -109,7 +109,7 @@ arr.myForEach((num, i, arr) => {
 });
 
 //polyfill for flat()
-function flat(arr, depth = 1) {
+function flat(arr, depth = Number.POSITIVE_INFINITY) {
   let res = [];
   arr.forEach((e) => {
     if (depth > 0 && Array.isArray(e)) res.push(...flat(e, depth - 1));

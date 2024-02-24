@@ -1,9 +1,11 @@
+let person = {name: "Shreeyansh"};
+
 // Polyfill for call()
 function printName(age) {
   console.log(`Hello ` + this.name + " has age: " + age);
 }
 
-Function.prototype.myBind = function (ctx = {}, ...args) {
+Function.prototype.myCall = function (ctx = {}, ...args) {
   if (typeof this !== "function") {
     throw new Error(this + "It is not a callable");
   }
@@ -22,12 +24,11 @@ Function.prototype.myApply = function (ctx = {}, args) {
   ctx.fn(...args);
 };
 
-let person = {name: "Shreeyansh"};
 
 // Polyfill for bind()
 Function.prototype.myBind = function (ctx = {}, ...args) {
   if (typeof this !== "function") {
-    throw new Error(this + "cannot be bound as  it is not a callable");
+    throw new Error(this + "cannot be bound as it is not a callable");
   }
   ctx.fn = this;
   return function (...newArgs) {
@@ -35,7 +36,7 @@ Function.prototype.myBind = function (ctx = {}, ...args) {
   };
 };
 
-// printName.myBind(person, 15);
+// printName.myCall(person, 15);
 // printName.myApply(person, [15]);
 const res = printName.myBind(person, 15);
 res();

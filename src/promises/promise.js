@@ -1,6 +1,6 @@
 //Polyfill for Promise
 
-function myPromise(executor) {
+function MyPromise(executor) {
   let isFullfilled = false,
     isCalled = false,
     onResolve,
@@ -54,7 +54,7 @@ function myPromise(executor) {
   }
 }
 
-const res = new myPromise((resolve, reject) => {
+const res = new MyPromise((resolve, reject) => {
   setTimeout(() => {
     resolve(1);
   }, 3000);
