@@ -8,7 +8,7 @@
 // [] => [the,sky,is,blue] => blue is sky the
 
 const reverseWords = function (n) {
-  let splitS = n.split("");
+  let splitS = n.split(" ");
   let stack = [];
 
   for (let i of splitS) stack.push(i);

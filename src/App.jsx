@@ -1,4 +1,5 @@
 import BreadCrumbs from "./react-js-interview-questions/breadcrumbs";
+import Timer from "./react-js-interview-questions/counter";
 import DarkAndLight from "./react-js-interview-questions/dark&lightMode";
 import FileExplorer from "./react-js-interview-questions/fileExplorer/fileExplorer";
 import GridLights from "./react-js-interview-questions/gridLights";
@@ -19,7 +20,8 @@ function App() {
       {/* <DarkAndLight /> */}
       {/* <BreadCrumbs /> */}
       {/* <OtpLogin /> */}
-      <MultiSelectInput />
+      {/* <MultiSelectInput /> */}
+      <Timer />
     </>
   );
 }
