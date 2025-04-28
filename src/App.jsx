@@ -1,4 +1,5 @@
 import BreadCrumbs from "./react-js-interview-questions/breadcrumbs";
+import ChatBotUI from "./react-js-interview-questions/chatbotUI";
 import Timer from "./react-js-interview-questions/counter";
 import DarkAndLight from "./react-js-interview-questions/dark&lightMode";
 import FileExplorer from "./react-js-interview-questions/fileExplorer/fileExplorer";
@@ -21,7 +22,8 @@ function App() {
       {/* <BreadCrumbs /> */}
       {/* <OtpLogin /> */}
       {/* <MultiSelectInput /> */}
-      <Timer />
+      {/* <Timer /> */}
+      <ChatBotUI />
     </>
   );
 }
