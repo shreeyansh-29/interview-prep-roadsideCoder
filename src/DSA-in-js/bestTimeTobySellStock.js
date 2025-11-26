@@ -9,14 +9,7 @@
 // Input: prices = [7, 6, 4, 3, 1];     ----->>>>>  Output: 0;
 
 function maxPrices(prices) {
-  let minStockPurchasePrice = prices[0] || 0,
-    profit = 0;
-
-  for (let i = 1; i < prices.length; i++) {
-    if (prices[i] < minStockPurchasePrice) minStockPurchasePrice = prices[i];
-    profit = Math.max(profit, prices[i] - minStockPurchasePrice);
-  }
-  return profit;
+  
 }
 
 maxPrices([7, 1, 5, 3, 6, 4]);

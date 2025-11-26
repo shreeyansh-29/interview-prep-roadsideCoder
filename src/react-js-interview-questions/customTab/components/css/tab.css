@@ -1,0 +1,12 @@
+.tab {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  border-bottom: 1px solid blue;
+  cursor: pointer;
+}
+
+.tab:disabled {
+  cursor: not-allowed;
+}

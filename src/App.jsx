@@ -1,5 +1,6 @@
 import BreadCrumbs from "./react-js-interview-questions/breadcrumbs";
 import ChatBotUI from "./react-js-interview-questions/chatbotUI";
+import ChatBotUI2 from "./react-js-interview-questions/chatbotUI-rzp";
 import Timer from "./react-js-interview-questions/counter";
 import DarkAndLight from "./react-js-interview-questions/dark&lightMode";
 import DynamicFormBuilder from "./react-js-interview-questions/DynamicForm";
@@ -27,9 +28,10 @@ function App() {
       {/* <MultiSelectInput /> */}
       {/* <Timer /> */}
       {/* <ChatBotUI /> */}
-      <DynamicFormBuilder />
+      {/* <DynamicFormBuilder /> */}
       {/* <Navbar /> */}
       {/* <TableWithFilters /> */}
+      <ChatBotUI2 />
     </>
   );
 }

@@ -145,7 +145,7 @@ const TableWithFilters = () => {
               }
               return <td>{item[col.key]}</td>;
             })}
-          </tr>
+          </tr> 
         ))}
       </tbody>
     </table>

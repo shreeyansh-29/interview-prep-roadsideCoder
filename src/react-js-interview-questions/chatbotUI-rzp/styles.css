@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --message-input-height: 40px;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.chatbot-container {
+  position: fixed;
+  height: 400px;
+  max-height: 100%;
+  width: 300px;
+  border: 1px solid black;
+  right: 0px;
+  bottom: 0px;
+  margin: 24px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.message-area {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message-input {
+  height: var(--message-input-height);
+}
+
+.message-input input {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px 4px 4px;
+  border: none;
+  border-top: 1px solid #333;
+  padding: 12px;
+}
+
+.message {
+  padding: 12px;
+  background-color: #eee;
+  max-width: 90%;
+  border-radius: 0px 6px 6px 0px;
+  text-align: left;
+}
+
+.message-container {
+  display: flex;
+  justify-content: start;
+}
+
+.message-container.self {
+  justify-content: end;
+}
+
+.message-container.self .message {
+  border-radius: 6px 0px 0px 6px;
+}
