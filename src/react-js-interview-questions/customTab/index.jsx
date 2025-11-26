@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Tabs, TabList, TabItem, TabPanel } from "./components/Tabs";
-import "./styles.css";
+import { Tabs, TabList, TabPanel, TabItem } from "./components";
+import "./index.css";
 
-export default function App() {
+export default function CustomTab() {
   const [activeTab, setActiveTab] = useState("three");
   return (
     <div className="App">
@@ -10,7 +10,6 @@ export default function App() {
       <h2>Start editing to see some magic happen!</h2>
 
       <Tabs
-        //
         defaultValue="two"
         onChange={(value) => setActiveTab(value)}
       >
@@ -51,7 +50,7 @@ export default function App() {
         </TabPanel>
       </Tabs>
 
-      <button onClick={() => setActiveTab("two")}>change tab</button>
+      <button onClick={() => setActiveTab("two")}>default tab</button>
     </div>
   );
 }
